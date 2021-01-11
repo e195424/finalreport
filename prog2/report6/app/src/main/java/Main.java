@@ -7,5 +7,7 @@ public class Main {
         DamageCalc DC = new DamageCalc(AP,BP);
 
         System.out.printf("MAX:"+DC.MaxCalc()+"\r\nMIN:"+DC.MinCalc());
+        
     }
 }
+
