@@ -55,18 +55,14 @@ public class AttackPoke{
 
         System.out.printf("攻撃側:レベルを入力して下さい");
         int Alevel = scan.nextInt();
+        setAlevel(Alevel);
 
         System.out.printf("攻撃側:攻撃力を入力して下さい");
         int Apower = scan.nextInt();
+        setPower(Apower);
 
         System.out.printf("攻撃側:技の威力を入力して下さい");
         int work = scan.nextInt();
-
-        setAlevel(Alevel);
-        setPower(Apower);
         setWork(work);
-
-        System.out.printf("攻撃側:レベル"+Alevel+"攻撃力"+Apower+"技の威力"+work+"\r\n");
-        
     }
 }

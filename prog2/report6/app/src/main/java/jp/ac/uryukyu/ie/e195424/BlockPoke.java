@@ -51,19 +51,21 @@ public class BlockPoke{
      */
     public void ddate(){
         Scanner scan = new Scanner(System.in);
+
         System.out.printf("防御側:レベルを入力して下さい");
         int Dlevel = scan.nextInt();
+        setDlevel(Dlevel);
 
         System.out.printf("防御側:HPを入力してください");
         int HP = scan.nextInt();
+        setDefense(defense);
+        setHP(HP);
 
         System.out.printf("防御側:防御力を入力して下さい");
         int defense = scan.nextInt();
-
-        setDlevel(Dlevel);
         setDefense(defense);
-        setHP(HP);
-        System.out.printf("防御側:レベル"+Dlevel+"HP"+HP+"防御力"+defense+"\r\n");
-      
+
+        scan.close();
+            
     }    
 }
