@@ -1,4 +1,5 @@
 package jp.ac.uryukyu.ie.e195424;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AttackPoke{
@@ -53,16 +54,20 @@ public class AttackPoke{
     public void adate(){
         Scanner scan = new Scanner(System.in);
 
-        System.out.printf("攻撃側:レベルを入力して下さい");
-        int Alevel = scan.nextInt();
-        setAlevel(Alevel);
+        try{
+            System.out.printf("攻撃側:レベルを入力して下さい");
+            int Alevel = scan.nextInt();
+            setAlevel(Alevel);
 
-        System.out.printf("攻撃側:攻撃力を入力して下さい");
-        int Apower = scan.nextInt();
-        setPower(Apower);
+            System.out.printf("攻撃側:攻撃力を入力して下さい");
+            int Apower = scan.nextInt();
+            setPower(Apower);
 
-        System.out.printf("攻撃側:技の威力を入力して下さい");
-        int work = scan.nextInt();
-        setWork(work);
+            System.out.printf("攻撃側:技の威力を入力して下さい");
+            int work = scan.nextInt();
+            setWork(work);
+        }catch(InputMismatchException e){
+            System.out.println("型が違います。"+ e);
+        }
     }
 }

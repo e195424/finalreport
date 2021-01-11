@@ -1,4 +1,5 @@
 package jp.ac.uryukyu.ie.e195424;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BlockPoke{
@@ -52,20 +53,24 @@ public class BlockPoke{
     public void ddate(){
         Scanner scan = new Scanner(System.in);
 
-        System.out.printf("防御側:レベルを入力して下さい");
-        int Dlevel = scan.nextInt();
-        setDlevel(Dlevel);
+        try{
+            System.out.printf("防御側:レベルを入力して下さい");
+            int Dlevel = scan.nextInt();
+            setDlevel(Dlevel);
 
-        System.out.printf("防御側:HPを入力してください");
-        int HP = scan.nextInt();
-        setDefense(defense);
-        setHP(HP);
+            System.out.printf("防御側:HPを入力してください");
+            int HP = scan.nextInt();
+            setDefense(defense);
+            setHP(HP);
 
-        System.out.printf("防御側:防御力を入力して下さい");
-        int defense = scan.nextInt();
-        setDefense(defense);
+            System.out.printf("防御側:防御力を入力して下さい");
+            int defense = scan.nextInt();
+            setDefense(defense);
 
-        scan.close();
+            scan.close();
+        } catch(InputMismatchException e){
+            System.out.println("型が違います"+ e);
+        }
             
     }    
 }
